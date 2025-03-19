@@ -1,0 +1,2 @@
+-- Strange language thing I made
+-- (C) Copyright 2024 - 2025 binguss
