@@ -28,6 +28,7 @@ function tokenizer.linetotokens(line)
     local this_token = {"action"}
 
     local splitted_statement = line.split("")
+    local statement_keywords = {}
     local this_keyword = ""
 
     local parsed_action = false
@@ -84,6 +85,10 @@ function tokenizer.linetotokens(line)
 
         if char == "<=" then
             this_action = "math_e_lessthan"
+        end
+
+        if this_token[1] ~= "action" then
+            this_token[3] = this_token[3] .. char
         end
     end
 end
